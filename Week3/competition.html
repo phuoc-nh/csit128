@@ -1,0 +1,187 @@
+<html>
+
+  <head>
+    <title>Programming Exercise</title>
+    <style>
+      .title {
+        font-size: 50px;
+         background-color: #ff000010;
+         padding: 30px;
+         text-align: center;
+        border-style: dotted;
+         border-color: red;
+         border-width: 5px;
+      }
+
+      #word1 {
+        color: orange
+      }
+      #word2 {
+        color: pink
+      }
+      #word3 {
+        color: blue
+      }
+
+      #table {
+        border-style: none;
+        border-collapse: collapse;
+        border-spacing: 10px;
+      }
+
+      #tableHeader {
+        font-size: 40px;
+        color: navy;
+        background-color: #00000010
+      }
+
+    .headerCell {
+      padding: 20px;
+      
+      vertical-align: top;
+      border-color: black;
+      border-style: dashed;
+      border-width: 5px;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+
+    .align-center {
+      text-align: center;
+    }
+
+    .align-left {
+      text-align: left;
+    }
+
+    .odd-row {
+      background-color: #cc007711
+    }
+
+    .even-row {
+      background-color: #55ff7720
+    }
+
+    .rank-col {
+      font-size: 60px;
+      color: maroon;
+      padding: 20px;
+      text-align: right;
+      vertical-align: top;
+      border-style: solid;
+      border-color: gray;
+      border-width: 1px;
+    }
+
+    .team-col {
+      padding: 20px;
+      text-align: center;
+      vertical-align: top;
+      border-style: solid;
+      border-color: gray;
+      border-width: 1px;
+    }
+
+    .member-col {
+      padding: 20px;
+      text-align: left;
+      vertical-align: top;
+      border-style: solid;
+      border-color: gray;
+      border-width: 1px;
+    }
+
+    .text-green {
+      color: green
+    }
+
+    .text-purple {
+      color: purple
+    }
+
+    .padding-10 {
+      padding: 10px;
+    }
+
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <h1>John Smith, SN: 1234567</h1>
+
+    <p class="title">
+      <span id="word1">World</span>
+      <span id="word2">Gurning</span>
+      <span id="word3">Competition</span>
+    </p>
+    
+    <br /><br />
+
+    <table id="table">
+      <!-- table header -->
+      <tr id="tableHeader" >
+        <th class="headerCell align-right">
+          Ranking
+        </th>
+        <th class="headerCell align-center" >
+          Team
+        </th>
+        <th class="headerCell align-right" >
+          Member
+        </th>
+      </tr>
+
+      <!-- table body -->
+      <tr class="odd-row">
+        <td class="rank-col">
+          1st
+        </td>
+        <td class="team-col">
+          <a href="http://didd.gov" target="_blank">Kingdom of Didd</a> <br /><br />
+
+          <img src="team1.png" width="300px" alt="Kingdom of Didd Flag" />
+
+        </td>
+        <td class="member-col">
+          <ul class="text-green">
+            <li style="color: purple; padding: 10px"><b>Thing 1</b> (<i>team leader</i>)</li>
+            <li style="padding: 10px">North-Going Zax</li>
+            <li style="padding: 10px">Cindy-Lou Who</li>
+            <li style="padding: 10px">McMonkey McBean</li>
+            <li style="padding: 10px">Vlad Vlad-i-Koff</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr class="even-row">
+        <td  class="rank-col">
+          2nd
+        </td>
+        <td  class="team-col">
+          <a href="http://binn.gov" target="_blank">Kingdom of Binn</a> <br /><br />
+
+          <img src="team2.png" width="300px" alt="Kingdom of Binn Flag" />
+
+        </td>
+        <td class="member-col">
+          <ul class="text-green">
+            <li aria-colspan="padding-10" class="text-purple"><b>Thing 2</b> (<i>team leader</i>)</li>
+            <li aria-colspan="padding-10">South-Going Zax</li>
+            <li aria-colspan="padding-10">The Grinch</li>
+            <li aria-colspan="padding-10">Bartholomew Cubbins</li>
+            <li aria-colspan="padding-10">Fizza-ma Wizza-ma Dill</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+
+  </body>
+
+</html>
