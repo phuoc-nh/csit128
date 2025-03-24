@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script>
+			var frogCount = "";
+			var FROG_FACE = "&#x1F438;";
+
+			function frog() {
+				const text = document.getElementById("frogCount")
+				frogCount +=  FROG_FACE
+				text.innerHTML = frogCount
+			}
+		</script>
+
+	</head>
+	<body>
+		<img src="../solution/frog.png" alt="" id="imgField" style="width: 300px;" onclick="frog()">
+		<br>
+		
+		<div id="frogCount" style="color: green">
+		</div>
+
+	</body>
+</html>

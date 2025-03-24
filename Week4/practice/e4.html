@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<script>
+			function lion() {
+				const text = document.getElementById("textField")
+
+				text.innerHTML = "<span style='color: orange'>Roar</span>"
+			}
+
+			function frog() {
+				const text = document.getElementById("textField")
+				text.innerHTML = "<span style='color: green'>Ribbit</span>"
+			}
+		</script>
+
+	</head>
+	<body>
+		
+		
+		<!-- <input type="text" id="textField" style="width: 400px;"> -->
+		 <img src="../solution/lion.png" alt="" id="imgField" style="width: 300px;" onclick="lion()">
+		 <img src="../solution/frog.png" alt="" id="imgField" style="width: 300px;" onclick="frog()">
+		<br>
+		<div id="textField"></div>
+
+	</body>
+</html>

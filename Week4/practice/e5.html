@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script>
+			var lionCount = 0;
+			var frogCount = 0;
+			
+			function lion() {
+				const text = document.getElementById("lionCount")
+				lionCount += 1
+				text.innerHTML = lionCount
+			}
+
+			function frog() {
+				const text = document.getElementById("frogCount")
+				frogCount += 1
+				text.innerHTML = frogCount
+			}
+		</script>
+
+	</head>
+	<body>
+		
+		
+		<!-- <input type="text" id="textField" style="width: 400px;"> -->
+		 <img src="../solution/lion.png" alt="" id="imgField" style="width: 300px;" onclick="lion()">
+		 <img src="../solution/frog.png" alt="" id="imgField" style="width: 300px;" onclick="frog()">
+		<br>
+		<div id="textField" style="color: orange">
+			Number of lion clicks: <span id="lionCount">0</span>
+		</div>
+		<div id="textField" style="color: green">
+			Number of frog clicks: <span id="frogCount">0</span>
+		</div>
+
+	</body>
+</html>

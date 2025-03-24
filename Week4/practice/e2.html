@@ -1,19 +1,26 @@
 <html>
 	<head>
 		<script>
-			function consoleHi() {
-				console.log('Hi there! JavaScript is cool!')
+			function showLionText() {
+				const input = document.getElementById("textField")
+
+				input.value = "The Lion Button is clicked"
 			}
 
-			function alertHi() {
-				alert("Hi there! JavaScript is cool!")
+			function showFrogText() {
+				const input = document.getElementById("textField")
+
+				input.value = "The Frog Button is clicked"
 			}
 		</script>
 
 	</head>
 	<body>
 		
-		<button onclick="consoleHi()">Console Hi</button>
-		<button onclick="alertHi()">Alert Hi</button>
+		<button onclick="showLionText()">Lion</button>
+		<button onclick="showFrogText()">Frog</button>
+		<br>
+		<br>
+		<input type="text" id="textField" style="width: 400px;">
 	</body>
 </html>
