@@ -1,43 +1,34 @@
 <html>
-
   <head>
-    <title>Exercise</title>
-
-    <script>
-      function doLion()
-      {
-        // get the text field element
-        var messageTextField = document.getElementById("messageBox");
-
-        // display message in the text field
-        messageTextField.value = "The Lion Button is clicked";
-      }
-
-      function doFrog()
-      {
-        // get the text field element
-        var messageTextField = document.getElementById("messageBox");
-
-        // display message in the text field
-        messageTextField.value = "The Frog Button is clicked";
-      }
-    </script>
+    <title>Question 2 week 4</title>
   </head>
 
+  <script>
+
+    function printLion() {
+      const input = document.getElementById("textField")
+      input.value = "The Lion Button is clicked"
+
+    }
+
+    function printFrog() {
+      const input = document.getElementById("textField")
+      input.value = "The Frog Button is clicked"
+    }
+
+
+
+  </script>
+
   <body>
+    <button onclick="printLion()">Lion</button>
+    <button onclick="printFrog()">Frog</button>
 
-    <button  onClick="doLion();">
-      Lion
-    </button>
+    <br>
+    <br>
 
-    <button  onClick="doFrog();">
-      Frog
-    </button>
+    <input type="text" id="textField" style="width: 200px;">
 
-    <br /><br />
-
-    <input type="text" size="50" id="messageBox" />
-
+    <!-- <img src="./frog.png" alt=""> -->
   </body>
-
 </html>

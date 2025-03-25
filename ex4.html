@@ -1,39 +1,32 @@
 <html>
-
   <head>
-    <title>Exercise</title>
+    <title>QUestion 4 week 4</title>
 
     <script>
-      function roar()
-      {
-        // get the span element
-        var messageSpan = document.getElementById("messageHolder");
 
-        // display a message in the span element
-        messageSpan.innerHTML = "<span style='color: orange;'>Roar</span>";
+      function handleClickLion() {
+        // pick the display element
+        const displayEl = document.getElementById("displayEl")
+
+        // insert the value in the element tag, use innerHTML instead of innerText to add more styles on the element
+        displayEl.innerHTML = "<span style='color: orange'>Roar</span>"
       }
 
-      function ribbit()
-      {
-        // get the span element
-        var messageSpan = document.getElementById("messageHolder");
-
-        // display a message in the span element
-        messageSpan.innerHTML = "<span style='color: green;'>Ribbit</span>";
+      function handleClickFrog() {
+        // pick the display element
+        const displayEl = document.getElementById("displayEl")
+        
+        // insert the value in the element tag, use innerHTML instead of innerText to add more styles on the element
+        displayEl.innerHTML = "<span style='color: green'>Ribbit</span>"
       }
+
     </script>
+
+    <body>
+      <img src="./lion.png" alt="" style="width: 300px;" onclick="handleClickLion()">
+      <img src="./frog.png" alt="" style="width: 300px;" onclick="handleClickFrog()">
+
+      <div id="displayEl"></div>
+    </body>
   </head>
-
-  <body>
-
-    <img src="lion.png" height="150px" onClick="roar();" />
-
-    <img src="frog.png" height="150px" onClick="ribbit();" />
-
-    <br /><br />
-
-    <span id="messageHolder"></span>
-
-  </body>
-
 </html>
