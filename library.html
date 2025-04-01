@@ -1,17 +1,37 @@
 <html>
 
-  <head>
-    <title>web</title>
+<head>
+  <title>web</title>
+  <style>
+    .form-container {
+      width: 20%;
+    }
 
-  </head>
+    .form-el {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      margin-bottom: 4px;
+    }
 
-  <body>
+    .col1 {
+      width: 40%;
+    }
 
-    <h1>Whosville library book search</h1>
+    .col2 {
+      width: 60%;
+    }
 
-    <form action="http://library.whosville/bsearch" method="get">
+  </style>
+</head>
 
-      <table border="0">
+<body>
+
+  <h1>Whosville library book search</h1>
+
+  <form action="http://library.whosville/bsearch" method="get">
+
+    <!-- <table border="0">
         <tr>
           <td>
             Author name:
@@ -65,12 +85,85 @@
           </td>
         </tr>
 
+      </table> -->
+
+
+
+
+    <form action="http://library.whosville/bsearch" method="get">
+      <h1>Form with CSS</h1>
+      <div class="form-container">
+        <div class="form-el">
+          <div class="col1">Author name:</div>
+          <div class="col2">
+            <input type="text" name="author"> <br>
+          </div>
+  
+        </div>
+        <div class="form-el">
+          <div class="col1">Publication year:</div>
+          <div class="col2">
+            <input type="text" name="year"> <br>
+          </div>
+        </div>
+
+        <div class="form-el">
+          <div class="col1">Subject:</div>
+
+          <div class="col2 ">
+            <input type="checkbox" name="sub" value="mth"> Mathematics <br>
+            <input type="checkbox" name="sub" value="cs"> Computer Science <br>
+            <input type="checkbox" name="sub" value="bio"> Biology <br>
+            <input type="checkbox" name="sub" value="phy"> Physics <br>
+            <input type="checkbox" name="sub" value="chem"> Chemistry <br>
+            <input type="submit" value="Search">
+            <input type="reset" value="Clear">
+          </div>
+        </div>
+
+      </div>
+
+
+      <h1>Form with Table</h1>
+
+       <table>
+        <tr>
+          <td>
+            Author name:
+          </td>
+          <td>
+            <input type="text" name="author"> <br>
+          </td>
+        </tr>
+        <tr>
+          <td>Publication year:</td>
+          <td>
+            <input type="text" name="year"> <br>
+          </td>
+        </tr>
+
+        <tr>
+          <td valign="top">Subject:</td>
+          <td>
+            <input type="checkbox" name="sub" value="mth"> Mathematics <br>
+            <input type="checkbox" name="sub" value="cs"> Computer Science <br>
+            <input type="checkbox" name="sub" value="bio"> Biology <br>
+            <input type="checkbox" name="sub" value="phy"> Physics <br>
+            <input type="checkbox" name="sub" value="chem"> Chemistry <br>
+
+            <input type="submit" value="Search">
+            <input type="reset" value="Clear">
+          </td>
+        </tr>
+
       </table>
-
-
-      
 
     </form>
 
-  </body>
+
+
+  </form>
+
+</body>
+
 </html>
