@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Swap Name and Email</title>
+  <style>
+    .name {
+      color: orange;
+    }
+
+    .email {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Paragraphs for name and email -->
+  <p id="first" class="name">Charlotte Good</p>
+  <p id="second" class="email">cg633@uowmail.edu.au</p>
+
+  <!-- Swap button -->
+  <button onclick="swapText()">Swap</button>
+
+  <script>
+    // This function swaps the text and class of the two elements
+    function swapText() {
+      const first = document.getElementById("first");
+      const second = document.getElementById("second");
+
+      // Store current text and class
+      const tempText = first.innerHTML;
+      const tempClass = first.className;
+
+      // Swap text and class
+      first.innerHTML = second.innerHTML;
+      first.className = second.className;
+
+      second.innerHTML = tempText;
+      second.className = tempClass;
+    }
+  </script>
+
+</body>
+</html>

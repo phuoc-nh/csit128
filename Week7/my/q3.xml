@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE result [
+	<!ELEMENT result (studentFirstName, studentLastName, studentId, subjects)>
+	<!ELEMENT studentFirstName (#PCDATA)>
+	<!ELEMENT studentLastName (#PCDATA)>
+	<!ELEMENT studentId (#PCDATA)>
+
+	<!ELEMENT subjects (subject*)>
+	<!ELEMENT subject (code,creditPoints,mark, grade)>
+	<!ELEMENT code (#PCDATA)>
+	<!ELEMENT creditPoints (#PCDATA)>
+	<!ELEMENT mark (#PCDATA)>
+	<!ELEMENT grade (#PCDATA)>
+]>
+
+<result>
+	<studentFirstName>John</studentFirstName>
+	<studentLastName>SMITH</studentLastName>
+	<studentId>1231234</studentId>
+	<subjects>
+		<subject>
+			<code>MATH101</code>
+			<creditPoints>4</creditPoints>
+			<mark>85</mark>
+			<grade>B</grade>
+		</subject>
+
+		<subject>
+			<code>ECON111</code>
+			<creditPoints>5</creditPoints>
+			<mark>70</mark>
+			<grade>B</grade>
+		</subject>
+		<subject>
+			<code>MATH101</code>
+			<creditPoints>4</creditPoints>
+			<mark>85</mark>
+			<grade>A</grade>
+		</subject>
+		<subject>
+			<code>MATH101</code>
+			<creditPoints>4</creditPoints>
+			<mark>85</mark>
+			<grade>A</grade>
+		</subject>
+
+
+	</subjects>
+</result>

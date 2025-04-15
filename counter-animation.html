@@ -1,60 +1,38 @@
 <html>
-
   <head>
-    <title>Exercise</title>
+    <title>Exercise 4</title>
 
     <script>
+      let counter = 0
+      let interval = null
 
-      var counter = 0;
-      var animationOn = false;
-      var counterAnimation;
+      function startCounter() {
+        if (!interval) {
+          interval = setInterval(() => {
+            const counterEl = document.getElementById("counter")
+            counter += 1
+            counterEl.innerText = counter
 
-      function updateCounter()
-      {
-        // update the counter value
-        counter = counter + 1;
-
-        // show the counter
-        var counterSpan = document.getElementById("counterHolder");
-        counterSpan.innerHTML = counter;
-      }
-
-      function startCounterAnimation()
-      {
-        if(!animationOn)
-        {
-          animationOn = true;
-
-          counterAnimation = setInterval(updateCounter, 1000);
+          }, 1000);
         }
       }
 
-      function stopCounterAnimation()
-      {
-        if(animationOn)
-        {
-          animationOn = false;
-
-          clearInterval(counterAnimation);
-        }
+      function stopCounter() {
+        clearInterval(interval)
+        interval = null
       }
+
+
     </script>
   </head>
 
   <body>
-
-    <button onClick="startCounterAnimation();">
-      Start counter animation
-    </button>
-
-    <button onClick="stopCounterAnimation();">
-      Stop counter animation
-    </button>
-
-    <br /><br />
-
-    <span id="counterHolder">0</span>
-
+   
+   <button onclick="startCounter()">Start counter animation</button>
+   <button onclick="stopCounter()">Stop counter animation</button>
+   <br>
+   <br>
+   <div id="counter">0</div>
   </body>
 
 </html>
