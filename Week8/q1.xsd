@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="audit">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="subject">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="code" type="xsd:string"></xsd:element>
+							<xsd:element name="title" type="xsd:string"></xsd:element>
+							<xsd:element name="statistics">
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="enrol" type="xsd:integer"></xsd:element>
+										<xsd:element name="withdrawn" type="xsd:integer"></xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="campus" type="xsd:string"></xsd:attribute>
+			<xsd:attribute name="year" type="xsd:integer"></xsd:attribute>
+			<xsd:attribute name="session" type="xsd:string"></xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
+
+
+
+
+
+<!-- <?xml version="1.0"?>
+<result ref="10007629P">
+  <contestantId>00025142</contestantId>
+  <examId>KB253DG</examId>
+  <score>156</score>
+  <band>C</band>
+  <digitalSignature>a720cf8e23bc1256bce2</digitalSignature>
+</result> -->
+
+
+
+<!-- <xsd:restriction base="xsd:integer">
+  <xsd:minInclusive value="0" />
+  <xsd:maxInclusive value="100" />
+</xsd:restriction>
+
+<xsd:restriction base="xsd:string">
+  <xsd:enumeration value="LARGE" />
+  <xsd:enumeration value="MEDIUM" />
+  <xsd:enumeration value="SMALL" />
+</xsd:restriction> -->
