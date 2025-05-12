@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>Question 3</title>
+
+		<script>
+			function readJSON() {
+				console.log(".>>")
+
+				const jsonViewEl = document.getElementById("json-view")
+				const json = JSON.parse(jsonViewEl.value)
+				console.log(json)
+
+
+
+
+				const subjectEl = document.getElementById("subject");
+				subjectEl.value = json.code
+
+				const titleEl = document.getElementById("title");
+				titleEl.value = json.title
+				// json.title = titleEl.value
+
+				const cpEl = document.getElementById("cp");
+				cpEl.value = json.cp
+				// json.cp = cpEl.value
+
+				const coreEl = document.getElementById("is-core");
+				coreEl.checked = json.coreFlag
+				// json.coreFlag = coreEl.checked
+
+
+				
+
+
+			}
+		</script>
+	</head>
+	<body>
+		
+
+		
+		
+		<textarea name="json" id="json-view" style="height: 200px; width: 400px;"></textarea>
+		<br>
+		<button onclick="readJSON();">Read JSON</button>  <br>
+		<br>
+
+		Subject code: <input type="text" id="subject"> <br>
+		Subject title: <input type="text" id="title"> <br>
+		Subject credit points: <input type="text" id="cp"> <br>
+		Core subject <input type="checkbox" id="is-core">  <br>
+	</body>
+</html>

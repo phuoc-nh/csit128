@@ -1,42 +1,13 @@
-<!DOCTYPE html>
 <html>
-<header>
-</header>
+	<head>
+		<title>
+			Week 10 lab
+		</title>
+	</head>
 
-<body>
-<span id="top"> <font color='orange'> Laura Weppler </font></span>
-<br>
-<span id="bottom"> <font color='red'> lw875@uowmail.edu.au</font></span>
-
-<br>
-<button onClick="swap()"> Swap </button>
-
-<script>
-	const name = "<font color='orange'> Laura Weppler </font>";
-	const email = "<font color='red'> lw875@uowmail.edu.au</font>";
-	const topSpan = document.getElementById("top");
-	let topValue = topSpan.innerHTML;
-	topValue = name;
-
-	const bottomSpan = document.getElementById("bottom");
-	let bottomValue = bottomSpan.innerHTML;
-	bottomValue = email;
-
-	function swap() {
-		if(topValue === name) {
-			topSpan.innerHTML = email;
-			bottomSpan.innerHTML = name;
-		}
-
-		else if(topValue === email) {
-			topSpan.innerHTML = name;
-			bottomSpan.innerHTML = email;
-		}
-
-		topValue = topSpan.innerHTML;
-		bottomValue = bottomSpan.innerHTML;
-	}
-
-</script>
-</body>
+	<body>
+		<a href="./question3.html">Question 3</a>
+		<br>
+		<a href="./question4.html">Question 4</a>
+	</body>
 </html>
