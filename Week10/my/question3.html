@@ -1,42 +1,49 @@
+
 <html>
 	<head>
 		<title>Question 3</title>
 
-		<script>
-			function viewJSON() {
-				console.log(".>>")
-				const json = {}
-				const subjectEl = document.getElementById("subject");
-				json.code = subjectEl.value
 
-				const titleEl = document.getElementById("title");
+		<script>
+
+			function viewJSON() {
+
+				const json = {}
+
+				const codeEl = document.getElementById("code")
+				json.code = codeEl.value
+
+				const titleEl = document.getElementById("title")
 				json.title = titleEl.value
 
-				const cpEl = document.getElementById("cp");
+				const cpEl = document.getElementById("cp")
 				json.cp = cpEl.value
 
-				const coreEl = document.getElementById("is-core");
+				const coreEl = document.getElementById("core")
 				json.coreFlag = coreEl.checked
 
-				console.log(json)
+				// console.log(json)
 
-				const jsonViewEl = document.getElementById("json-view")
 
-				jsonViewEl.value = JSON.stringify(json, null, 2)
-
+				const containerEl = document.getElementById("json-container")
+				containerEl.value = JSON.stringify(json, null, 2)
+				// containerEl.value = JSON.stringify(json, ["code", "title"], 2)
 
 			}
+
 		</script>
+
 	</head>
 	<body>
-		Subject code: <input type="text" id="subject"> <br>
+		Subject code: <input type="text" id="code"> <br>
 		Subject title: <input type="text" id="title"> <br>
-		Subject credit points: <input type="text" id="cp"> <br>
-		Core subject <input type="checkbox" id="is-core">  <br>
-
+		Subject credit point: <input type="text" id="cp"> <br>
+		Core subject: <input type="checkbox" id="core"> <br>
 		<br>
-		<button onclick="viewJSON();">View JSON</button>  <br>
 
-		<textarea name="json" id="json-view" style="height: 200px; width: 400px;"></textarea>
+		<button onclick="viewJSON()">View JSON</button>
+		<br>
+		<textarea name="" id="json-container" style="width: 400px; height: 200px;"></textarea>
+
 	</body>
 </html>

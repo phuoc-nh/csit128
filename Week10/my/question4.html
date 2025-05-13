@@ -1,53 +1,53 @@
+
 <html>
 	<head>
 		<title>Question 3</title>
 
+
 		<script>
+
 			function readJSON() {
-				console.log(".>>")
+				const container = document.getElementById("json-container")
 
-				const jsonViewEl = document.getElementById("json-view")
-				const json = JSON.parse(jsonViewEl.value)
-				console.log(json)
+				console.log("container", container.value)
 
+				const json = JSON.parse(container.value)
 
+				console.log('json', json)
 
+				const codeEl = document.getElementById("code")
+				codeEl.value = json.code
 
-				const subjectEl = document.getElementById("subject");
-				subjectEl.value = json.code
-
-				const titleEl = document.getElementById("title");
+				const titleEl = document.getElementById("title")
 				titleEl.value = json.title
-				// json.title = titleEl.value
 
-				const cpEl = document.getElementById("cp");
+				const cpEl = document.getElementById("cp")
 				cpEl.value = json.cp
-				// json.cp = cpEl.value
 
-				const coreEl = document.getElementById("is-core");
+				const coreEl = document.getElementById("core")
 				coreEl.checked = json.coreFlag
-				// json.coreFlag = coreEl.checked
-
-
-				
-
-
 			}
+			
+
 		</script>
+
 	</head>
 	<body>
 		
+		
 
 		
 		
-		<textarea name="json" id="json-view" style="height: 200px; width: 400px;"></textarea>
+		<textarea name="" id="json-container" style="width: 400px; height: 200px;"></textarea>
 		<br>
-		<button onclick="readJSON();">Read JSON</button>  <br>
-		<br>
+		<button onclick="readJSON();">Read JSON</button>
 
-		Subject code: <input type="text" id="subject"> <br>
+		<br>
+		<br>
+		Subject code: <input type="text" id="code"> <br>
 		Subject title: <input type="text" id="title"> <br>
-		Subject credit points: <input type="text" id="cp"> <br>
-		Core subject <input type="checkbox" id="is-core">  <br>
+		Subject credit point: <input type="text" id="cp"> <br>
+		Core subject: <input type="checkbox" id="core"> <br>
+
 	</body>
 </html>
